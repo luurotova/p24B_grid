@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Grid Colores</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <p class="grid-item grid-item--1">1</p>
+        <p class="grid-item grid-item--2">2</p>
+        <p class="grid-item grid-item--3">3</p>
+        <p class="grid-item grid-item--4">4</p>
+        <p class="grid-item grid-item--5">5</p>
+        <p class="grid-item grid-item--6">6</p>
+        <p class="grid-item grid-item--7">7</p>
+        <p class="grid-item grid-item--8">8</p>
+        <p class="grid-item grid-item--9">9</p>
+        <p class="grid-item grid-item--10">10</p>
+        <p class="grid-item grid-item--11">11</p>
+        <p class="grid-item grid-item--12">12</p>
+        <p class="grid-item grid-item--13">13</p>
+        <p class="grid-item grid-item--14">14</p>
+        <p class="grid-item grid-item--15">15</p>
+        <p class="grid-item grid-item--16">16</p>
+        <p class="grid-item grid-item--17">17</p>
+        <p class="grid-item grid-item--18">18</p>
+        <p class="grid-item grid-item--19">19</p>
+        <p class="grid-item grid-item--20">20</p>
+        <p class="grid-item grid-item--21">21</p>
+        <p class="grid-item grid-item--22">22</p>
+        <p class="grid-item grid-item--23">23</p>
+        <p class="grid-item grid-item--24">24</p>
+    </div>
+    <div class="photo-container">
+    </div>
+</body>
+<script>
+    const allButtons = document.querySelectorAll('.grid-item');
+
+    const result = document.querySelector('.grid-item');
+
+
+    allButtons.forEach((item, index) => {
+        //defino color
+        const color = "hsl(" + Math.floor(280 - (index * (280 / allButtons.length))) + ", 100%, 50%)";
+
+        //asigno color al item
+        item.style.backgroundColor = color;
+
+    });
+</script>
+
+</html>
